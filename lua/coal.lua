@@ -33,6 +33,7 @@ function M.setup(config)
         chinese_silver = cc.chinese_silver or '#CCCCCC',
         anti_flash_white = cc.anti_flash_white or '#F2F2F2',
         white = cc.white or '#FFFFFF',
+        yellow = cc.yellow or '#D89216'
     }
 
     local palette = {
@@ -52,6 +53,7 @@ function M.setup(config)
             medium = colors.chinese_silver,
             brighter = colors.anti_flash_white,
             brightest = colors.white,
+            yellow = colors.yellow,
         },
     }
 
@@ -61,6 +63,7 @@ function M.setup(config)
 
         darkest = { fg = palette.foreground.darkest },
         darker = { fg = palette.foreground.darker },
+        yellow = { fg = palette.foreground.yellow },
         darker_italic = { fg = palette.foreground.darker, em = 'italic' },
         dimmed = { fg = palette.foreground.dimmed },
         dimmed_italic = { fg = palette.foreground.dimmed, em = 'italic' },
@@ -135,7 +138,8 @@ function M.setup(config)
         Define = groups.darker,
         Delimiter = groups.darker,
         Float = groups.brighter,
-        Function = groups.brighter,
+        --Function = groups.brighter,
+        Function = groups.yellow,
         Identifier = groups.medium,
         Include = groups.darker,
         Keyword = groups.dimmed_italic,
@@ -173,7 +177,8 @@ function M.setup(config)
         TSException = groups.brightest,
         TSField = groups.medium,
         TSFloat = groups.brighter,
-        TSFunction = groups.brighter,
+        --TSFunction = groups.brighter,
+        TSFunction = groups.yellow,
         TSFuncBuiltin = groups.brighter,
         TSFuncMacro = groups.brighter,
         TSInclude = groups.darker,
